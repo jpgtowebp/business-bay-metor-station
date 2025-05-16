@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Bay Metro Station | Dubai Metro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+                        #1a365d;
+            height: 60vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #e53e3e;
+        }
+        .station-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .station-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="https://businessbaymetrostation.com/" class="text-xl font-bold text-red-600 flex items-center">
+                <i class="fas fa-train mr-2"></i>
+                Business Bay Metro Stations
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-800 hover:text-red-600 transition">About</a>
+                <a href="#facilities" class="text-gray-800 hover:text-red-600 transition">Facilities</a>
+                <a href="#attractions" class="text-gray-800 hover:text-red-600 transition">Nearby</a>
+                <a href="#transport" class="text-gray-800 hover:text-red-600 transition">Transport</a>
+                <a href="#contact" class="text-gray-800 hover:text-red-600 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <i class="fas fa-bars text-gray-800"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-6 py-4 shadow-inner">
+            <a href="#about" class="block py-2 text-gray-800 hover:text-red-600 transition">About</a>
+            <a href="#facilities" class="block py-2 text-gray-800 hover:text-red-600 transition">Facilities</a>
+            <a href="#attractions" class="block py-2 text-gray-800 hover:text-red-600 transition">Nearby</a>
+            <a href="#transport" class="block py-2 text-gray-800 hover:text-red-600 transition">Transport</a>
+            <a href="#contact" class="block py-2 text-gray-800 hover:text-red-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero flex items-center justify-center mt-12">
+        <div class="text-center text-white px-6">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Business Bay Metro Station</h1>
+            <p class="text-xl md:text-2xl mb-8">Your Gateway to Dubai's Business District</p>
+            <a href="#about" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition">Learn More</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title mb-12">About The Station</h2>
+            <div class="md:flex md:space-x-8">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4">Strategic Location</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Business Bay Metro Station is a key station on the Red Line of the Dubai Metro. Located in the heart of Dubai's business district, this station serves as an important transport hub for professionals, residents, and tourists alike.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Situated on Sheikh Zayed Road, the station provides convenient access to numerous corporate offices, residential towers, and entertainment venues in the Business Bay area.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Operating Hours</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex justify-between mb-3 border-b pb-2">
+                            <span class="font-medium">Monday to Thursday</span>
+                            <span>5:30 AM - 12:00 AM</span>
+                        </div>
+                        <div class="flex justify-between mb-3 border-b pb-2">
+                            <span class="font-medium">Friday</span>
+                            <span>5:30 AM - 1:00 AM</span>
+                        </div>
+                        <div class="flex justify-between mb-3 border-b pb-2">
+                            <span class="font-medium">Saturday</span>
+                            <span>5:30 AM - 12:00 AM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-medium">Sunday</span>
+                            <span>8:00 AM - 12:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title mb-12">Station Facilities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="station-card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ticket Counters</h3>
+                    <p class="text-gray-700">
+                        Staffed ticket offices for Nol card purchase and recharge. Automated ticket machines also available for quick self-service.
+                    </p>
+                </div>
+                <div class="station-card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Free Wi-Fi</h3>
+                    <p class="text-gray-700">
+                        Complimentary high-speed wireless internet throughout the station to keep you connected during your journey.
+                    </p>
+                </div>
+                <div class="station-card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Retail Shops</h3>
+                    <p class="text-gray-700">
+                        Convenience stores and retail outlets offering snacks, refreshments, and travel essentials.
+                    </p>
+                </div>
+                <div class="station-card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cafés</h3>
+                    <p class="text-gray-700">
+                        Various coffee shops and eateries offering refreshments and quick meals for travelers on the go.
+                    </p>
+                </div>
+                <div class="station-card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Accessibility</h3>
+                    <p class="text-gray-700">
+                        Elevators, escalators, and facilities for people of determination to ensure comfortable travel for everyone.
+                    </p>
+                </div>
+                <div class="station-card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Park & Ride</h3>
+                    <p class="text-gray-700">
+                        Ample parking facilities allowing commuters to park their vehicles and continue their journey via metro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions -->
+    <section id="attractions" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title mb-12">Nearby Attractions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Dubai Water Canal</h3>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-map-marker-alt text-red-600 mr-2"></i>10 minutes walking distance</p>
+                        <p class="text-gray-700">
+                            A 3.2km long waterway extending from the Creek in Old Dubai through to Business Bay, ending in the Arabian Gulf. Features waterfall bridges, cycling paths, and recreational areas.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bay Avenue Mall</h3>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-map-marker-alt text-red-600 mr-2"></i>5 minutes walking distance</p>
+                        <p class="text-gray-700">
+                            A community retail destination in Business Bay featuring restaurants, cafés, supermarkets, and various retail outlets for shopping and entertainment.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Dubai Design District (d3)</h3>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-map-marker-alt text-red-600 mr-2"></i>15 minutes by taxi</p>
+                        <p class="text-gray-700">
+                            A creative hub dedicated to design, fashion, and art, featuring galleries, design studios, and trendy restaurants in a modern setting.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Burj Khalifa & Dubai Mall</h3>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-map-marker-alt text-red-600 mr-2"></i>1 metro station away</p>
+                        <p class="text-gray-700">
+                            The world's tallest building and one of the largest shopping malls are just one metro stop away at Dubai Mall/Burj Khalifa Station.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transport Options -->
+    <section id="transport" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title mb-12">Transport Options</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4 text-center">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Feeder Buses</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Bus F13: Business Bay - Al Khail Gate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Bus F14: Business Bay - Executive Towers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Bus F16: Business Bay - Marasi Drive</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-info-circle text-blue-600 mt-1 mr-2"></i>
+                            <span>Frequency: Every 10-15 minutes during peak hours</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4 text-center">
+                        <i class="fas fa-taxi"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Taxis & Ride Sharing</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Dedicated taxi rank at station exits</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Uber and Careem pick-up points</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Women-only pink taxis available</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-info-circle text-blue-600 mt-1 mr-2"></i>
+                            <span>24-hour taxi service with short waiting times</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-red-600 text-4xl mb-4 text-center">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Pedestrian Access</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Pedestrian bridges connecting to both sides of Sheikh Zayed Road</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Air-conditioned walkways during summer months</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>Connected to nearby buildings via covered walkways</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-info-circle text-blue-600 mt-1 mr-2"></i>
+                            <span>Wheelchair accessible pathways throughout</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Call Us</h3>
+                    <p>RTA Customer Service:</p>
+                    <p class="font-semibold">800-9090</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p>For Inquiries:</p>
+                    <p class="font-semibold">ask@rta.ae</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Location</h3>
+                    <p>Sheikh Zayed Road,</p>
+                    <p>Business Bay, Dubai, UAE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://businessbaymetrostation.com/" class="text-xl font-bold flex items-center">
+                        <i class="fas fa-train mr-2"></i>
+                        Business Bay Metro Station
+                    </a>
+                    <p class="mt-2 text-sm text-gray-400">Your gateway to Dubai's business district</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-gray-700 hover:bg-red-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-gray-700 hover:bg-red-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-gray-700 hover:bg-red-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="bg-gray-700 hover:bg-red-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2023 Business Bay Metro Station. All rights reserved.</p>
+                <p class="mt-2">
+                    <a href="#" class="hover:text-red-600 transition">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-red-600 transition">Terms of Service</a> | 
+                    <a href="#" class="hover:text-red-600 transition">Sitemap</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active class to nav items on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-red-600');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-red-600');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
